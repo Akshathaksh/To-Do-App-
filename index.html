@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student To-Do App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>
+  📚 Student To-Do App 
+  <button onclick="toggleTheme()">🌙</button>
+</h1>
+    <input type="text" id="searchInput" placeholder="Search tasks..." onkeyup="loadTasks()">
+    <p id="taskCounter"></p>
+    <p id="motivation"></p>
+    <p id="streak"></p>
+
+    <div class="input-section">
+  <input type="text" id="taskInput" placeholder="Enter your task...">
+  <button onclick="startVoice()">🎤 Speak</button>
+  <input type="date" id="dueDate">
+
+  <select id="priority">
+    <option value="High">High</option>
+    <option value="Medium">Medium</option>
+    <option value="Low">Low</option>
+  </select>
+
+  <div class="progress-container">
+  <div id="progressBar"></div>
+</div>
+<p id="progressText"></p>
+
+  <button onclick="addTask()">Add</button>
+</div>
+
+    <h3>📌 Pending Tasks</h3>
+<ul id="pendingList"></ul>
+
+<h3>✅ Completed Tasks</h3>
+<ul id="completedList"></ul>
+    <button onclick="clearAll()">Clear All</button>
+     <button onclick="exportTasks()">📥 Export Tasks</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
